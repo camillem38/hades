@@ -1,6 +1,4 @@
-﻿TEST
-
-Hades
+﻿Hades
 =====
 
 Ce projet est un exercice réalisé dans le cadre de la formation [IP-Formation "Responsable de Projet Informatique"][1], session 2013, Lyon
