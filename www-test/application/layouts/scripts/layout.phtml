@@ -1,0 +1,52 @@
+<?php echo $this->doctype()."\r\n" ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+     <script type="text/javascript">
+        urlBaseCkeditor = '<?php echo $this->baseUrl(); ?>/scripts/ckeditor/';
+    //  ...
+    </script>
+ <?php
+    echo $this->headMeta()."\r\n";
+    echo $this->headTitle()."\r\n";
+    $this->headLink()->appendStylesheet($this->baseUrl().'/styles/layout.css');
+    $this->headLink()->appendStylesheet($this->baseUrl().'/styles/header.css');
+    $this->headLink()->appendStylesheet($this->baseUrl().'/styles/menu.css');
+    $this->headLink()->appendStylesheet($this->baseUrl().'/styles/footer.css');
+    echo $this->headLink()."\r\n";
+    ?>
+</head>
+
+<body>
+    <div id="contener">
+        <div id="header">
+            <?php echo $this->partial('header.phtml'); ?>
+        </div>
+        <div id="content">
+            <div id="menu">
+                <?php echo $this->partial('menu.phtml'); ?>
+            </div>
+            
+            <div id="contenu">
+                <?php 
+            if($this->boutique){
+                echo $this->partial('boutique.phtml');
+            }
+            ?>
+                <?php echo $this->layout()->content; ?>
+            </div>
+        </div>
+        <div id="footer">
+            <?php echo $this->partial('footer.phtml'); ?>
+            <div class="pagination">
+                <?php
+                    if ($this->liste) {
+                        echo $this->paginationControl($this->liste);
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

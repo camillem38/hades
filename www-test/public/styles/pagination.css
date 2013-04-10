@@ -1,0 +1,91 @@
+#boutpag-gauche, #boutpag-droit, #boutpag-gauche div, #boutpag-droit div {
+    float: left;
+}
+
+#boutpag-gauche a, #boutpag-droit a,
+#boutpag-gauche span, #boutpag-droit span {
+    display: block;
+    height: 22px;
+    float: left;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#boutpag-gauche span, #boutpag-droit span {
+    cursor: default;
+    color: #999;
+}
+
+#boutpag-gauche .page a, #boutpag-droit .page a, #boutpag-gauche .page span,
+#boutpag-droit .page span, #boutpag-gauche .blank a, #boutpag-droit .blank a,
+#boutpag-gauche .blank span, #boutpag-droit .blank span {
+    padding: 0 6px;
+}
+
+#boutpag-gauche a:hover, #boutpag-droit a:hover,
+#button3-gauche a:hover, #button3-droit a:hover {
+    text-decoration: none;
+    color: #0B55C4;
+    font-weight: bold;
+}
+
+#boutpag-gauche a, #boutpag-gauche span, #button3-gauche a {
+    padding: 0 24px 0 6px;
+}
+
+#boutpag-droit a, #boutpag-droit span, #button3-droit a {
+    padding: 0 6px 0 24px;
+}
+
+#boutpag-gauche {
+    background: url(../images/boutpag_gauche.png) no-repeat;
+    float: left;
+    margin-left: 5px;
+}
+
+#boutpag-droit, #button3-droit {
+    background: url(../images/boutpag_droit.png) 100% 0 no-repeat;
+    float: left;
+    margin-left: 5px;
+}
+
+#boutpag-droit-on .prev, #button3-droit-on .prev {
+    background: url(../images/boutpag_prec.png) no-repeat;
+}
+
+#boutpag-droit-off .prev {
+    background: url(../images/boutpag_prec_off.png) no-repeat;
+}
+
+#boutpag-droit-on .start {
+    background: url(../images/boutpag_prem.png) no-repeat;
+}
+
+#boutpag-droit-off .start {
+    background: url(../images/boutpag_prem_off.png) no-repeat;
+}
+
+#boutpag-gauche .page, #boutpag-gauche .blank {
+    background: url(../images/boutpag_droit_cap.png) 100% 0 no-repeat;
+}
+
+#boutpag-gauche-on .next, #button3-gauche-on .next {
+    background: url(../images/boutpag_suiv.png) 100% 0 no-repeat;
+}
+
+#boutpag-gauche-off .next {
+    background: url(../images/boutpag_suiv_off.png) 100% 0 no-repeat;
+}
+
+#boutpag-gauche-on .end {
+    background: url(../images/boutpag_dern.png) 100% 0 no-repeat;
+}
+
+#boutpag-gauche-off .end {
+    background: url(../images/boutpag_dern_off.png) 100% 0 no-repeat;
+}

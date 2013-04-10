@@ -1,0 +1,84 @@
+<?php
+$i      = 0;
+$iMax   = count($this->pagesInRange);
+
+if ($iMax > 1) {
+    foreach ($this->pagesInRange as $page) {
+        $i++;
+        if ($i == 1) {
+            if ($this->last > $iMax) {
+                echo '<div id="boutpag-droit">'."\r\n";
+                if ($page == $this->first) {
+                    echo '<div id="boutpag-droit-off">'."\r\n";
+                    echo '<div class="start"><span>Début</span></div>'."\r\n";
+                    echo '</div>'."\r\n";
+                }
+                else {
+                    echo '<div id="boutpag-droit-on">'."\r\n";
+                    echo '<div class="start"><a href="'
+                        .$this->url(array('numpage' => $this->first, 'acces' => 'null'))
+                        .'" title="Début">Début</a></div>'."\r\n";
+                    echo '</div>'."\r\n";
+                }
+                echo '</div>'."\r\n";
+            }
+            echo '<div id="boutpag-droit">'."\r\n";
+            if (isset($this->previous)) {
+                echo '<div id="boutpag-droit-on">'."\r\n";
+                echo '<div class="prev"><a href="'
+                    .$this->url(array('numpage' => $this->previous, 'acces' => 'null'))
+                    .'" title="Précédent">Précédent</a></div>'."\r\n";
+                echo '</div>';
+            }
+            else {
+                echo '<div id="boutpag-droit-off">'."\r\n";
+                echo '<div class="prev"><span>Précédent</span></div>'."\r\n";
+                echo '</div>'."\r\n";
+            }
+            echo '</div>'."\r\n";
+        }
+        echo '<div id="boutpag-gauche">'."\r\n";
+        echo '<div class="page">'."\r\n";
+        if ($page == $this->current) {
+            echo '<span>'.$page.'</span>';
+        }
+        else {
+            echo '<a href="'.$this->url(array('numpage' => $page, 'acces' => 'null'))
+                            .'" title="Page '.$page.'">'.$page.'</a>';
+        }
+        echo '</div>'."\r\n";
+        echo '</div>'."\r\n";
+        if ($i == $iMax) {
+            echo '<div id="boutpag-gauche">'."\r\n";
+            if (isset($this->next)) {
+                echo '<div id="boutpag-gauche-on">'."\r\n";
+                echo '<div class="next"><a href="'
+                    .$this->url(array('numpage' => $this->next, 'acces' => 'null'))
+                    .'" title="Suivant">Suivant</a></div>'."\r\n";
+                echo '</div>'."\r\n";
+            }
+            else {
+                echo '<div id="boutpag-gauche-off">'."\r\n";
+                echo '<div class="next"><span>Suivant</span></div>'."\r\n";
+                echo '</div>'."\r\n";
+            }
+            echo '</div>'."\r\n";
+            if ($this->last > $iMax) {
+                echo '<div id="boutpag-gauche">'."\r\n";
+                if ($page == $this->last) {
+                    echo '<div id="boutpag-gauche-off">'."\r\n";
+                    echo '<div class="end"><span>Fin</span></div>'."\r\n";
+                    echo '</div>'."\r\n";
+                }
+                else {
+                    echo '<div id="boutpag-gauche-on">'."\r\n";
+                    echo '<div class="end"><a href="'
+                        .$this->url(array('numpage' => $this->last, 'acces' => 'null'))
+                        .'" title="Fin">Fin</a></div>'."\r\n";
+                    echo '</div>'."\r\n";
+                }
+                echo '</div>'."\r\n";
+            }
+        }
+    }
+}
