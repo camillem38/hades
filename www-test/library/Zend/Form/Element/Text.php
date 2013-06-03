@@ -12,31 +12,26 @@
  * obtain it through the world-wide-web, please send an email
  * to license@zend.com so we can send you a copy immediately.
  *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-/** Zend_Form_Element_Xhtml */
-require_once 'Zend/Form/Element/Xhtml.php';
+namespace Zend\Form\Element;
+
+use Zend\Form\Element;
 
 /**
- * Text form element
- *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Text.php 24593 2012-01-05 20:35:02Z matthew $
  */
-class Zend_Form_Element_Text extends Zend_Form_Element_Xhtml
+class Text extends Element
 {
     /**
-     * Default form view helper to use for rendering
-     * @var string
+     * Seed attributes
+     *
+     * @var array
      */
-    public $helper = 'formText';
+    protected $attributes = array(
+        'type' => 'text',
+    );
 }

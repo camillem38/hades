@@ -13,7 +13,7 @@ defined('FONTS_PATH')
     || define('FONTS_PATH', APPLICATION_PATH . '/../public/fonts/');
 
 defined('IMAGE_URL')
-    || define('IMAGE_URL', "http://127.0.0.1/hades/images/");
+    || define('IMAGE_URL', "www.hadesproject.com/images/");
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(

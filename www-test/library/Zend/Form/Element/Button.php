@@ -12,31 +12,26 @@
  * obtain it through the world-wide-web, please send an email
  * to license@zend.com so we can send you a copy immediately.
  *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-/** Zend_Form_Element_Submit */
-require_once 'Zend/Form/Element/Submit.php';
+namespace Zend\Form\Element;
+
+use Zend\Form\Element;
 
 /**
- * Button form element
- *
- * @category   Zend
- * @package    Zend_Form
- * @subpackage Element
- * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Button.php 24593 2012-01-05 20:35:02Z matthew $
  */
-class Zend_Form_Element_Button extends Zend_Form_Element_Submit
+class Button extends Element
 {
     /**
-     * Use formButton view helper by default
-     * @var string
+     * Seed attributes
+     *
+     * @var array
      */
-    public $helper = 'formButton';
+    protected $attributes = array(
+        'type' => 'button',
+    );
 }
