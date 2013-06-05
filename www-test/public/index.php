@@ -32,14 +32,14 @@ $loader = Zend_Loader_Autoloader::getInstance();
 $loader->registerNamespace('App_');;
 
 Zend_Session::start();
-/*
+
 $config = new Zend_Config_Ini('/../application/configs/db_config.ini', 'offline');
 $registry = Zend_Registry::getInstance();
 $registry->set('db_config',$config);
 $db_config = Zend_Registry::get('db_config');
 $db = Zend_Db::factory($db_config->db);
 Zend_Db_Table::setDefaultAdapter($db);
-$db->query("SET NAMES 'utf8'");*/
+$db->query("SET NAMES 'utf8'");
 
 
 // Create application, bootstrap, and run
