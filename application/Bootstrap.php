@@ -8,7 +8,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		 * $autoloader->setFallbackAutoloader(true); return $autoloader;
 		 */
 	}
-	
+        
+
 	protected function _initView() {
 		$view = new Zend_View();
 		$view->env = APPLICATION_ENV;
