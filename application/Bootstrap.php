@@ -2,6 +2,7 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	
+<<<<<<< HEAD
 	protected function _initAutoLoader() {
 		/*
 		 * $autoloader = Zend_Loader_Autoloader::getInstance();
@@ -10,6 +11,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	}
         
 
+=======
+>>>>>>> origin/dev
 	protected function _initView() {
 		$view = new Zend_View();
 		$view->env = APPLICATION_ENV;
@@ -34,18 +37,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		                     ->appendFile ( '/js/vendor/bootstrap.min.js' )
 		                     ->appendFile ( '/js/vendor/main.js' );
 		
-		
-		$view->addHelperPath(APPLICATION_PATH . '/modules/home/views/helpers', 'Zend_view_helper');
-		// Add it to the ViewRenderer
-		$viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
-		$viewRenderer->setView($view);
-		
 		return $view;
 	}
 	
+<<<<<<< HEAD
 	protected function _initViewHelpers() {
 		Zend_Paginator::setDefaultScrollingStyle('Sliding');
 		Zend_View_Helper_PaginationControl::setDefaultViewPartial('pagination.phtml');
 	}
 }
 
+=======
+}
+
+>>>>>>> origin/dev

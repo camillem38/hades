@@ -9,6 +9,7 @@ class Admin_IndexController extends Zend_Controller_Action {
         
     }
     
+<<<<<<< HEAD
     public function addquestionnaireAction() {
             $form = new Admin_Form_Questionnaire();
             
@@ -32,4 +33,6 @@ class Admin_IndexController extends Zend_Controller_Action {
             
     }
     
+=======
+>>>>>>> origin/dev
 }
