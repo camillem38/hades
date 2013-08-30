@@ -1,5 +1,7 @@
 <h2>Hades test</h2>
-<p>voici une vue</p>
+
+
+<a class="button add" href="<?php echo $this->url(array('controller'=>'index','action'=>'addQuestionnaire','module'=>'admin'));?>">Ajouter un questionnaire</a>
 
 <?php foreach($this->questionnaires as $questionnaire): ?>
 <p><?= $questionnaire->name ?></p>
