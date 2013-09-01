@@ -6,15 +6,14 @@ class Admin_IndexController extends Zend_Controller_Action {
     }
 
     public function indexAction() {
-        
+        $bdd_questionnaire = new Frontend_Model_DbTable_Questionnaire();
+        $this->view->questionnaires = $bdd_questionnaire->fetchAll(null,'name');
     }
     
-<<<<<<< HEAD
     public function addquestionnaireAction() {
             $form = new Admin_Form_Questionnaire();
             
             $this->view->form = $form;
-            
             
             if ($this->getRequest()->isPost()) {
                 $questionnaireData = $this->getRequest()->getPost();
@@ -28,11 +27,9 @@ class Admin_IndexController extends Zend_Controller_Action {
                     $db_questionnaires = new Admin_Model_DbTable_Questionnaire();
                     $db_questionnaires->ajouterQuestionnaire($name, $timer, $nbQuestion);
                 }
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('index', 'index', 'frontend');
             }
             
     }
-    
-=======
->>>>>>> origin/dev
+
 }

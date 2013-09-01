@@ -1,0 +1,9 @@
+<h1>Administration</h1>
+
+<a class="button add" href="<?php echo $this->url(array('controller'=>'index','action'=>'addQuestionnaire','module'=>'admin'));?>">Ajouter un questionnaire</a>
+
+
+<h3>Liste des questionnaires : </h3>
+<?php foreach($this->questionnaires as $questionnaire): ?>
+<p>Nom : <?= $questionnaire->name ?> -  Durée : <?= $questionnaire->timer ?> - Nombre de question : <?= $questionnaire->nbQuery ?></p>
+<?php endforeach;  ?>

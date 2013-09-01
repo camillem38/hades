@@ -2,17 +2,7 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	
-<<<<<<< HEAD
-	protected function _initAutoLoader() {
-		/*
-		 * $autoloader = Zend_Loader_Autoloader::getInstance();
-		 * $autoloader->setFallbackAutoloader(true); return $autoloader;
-		 */
-	}
-        
 
-=======
->>>>>>> origin/dev
 	protected function _initView() {
 		$view = new Zend_View();
 		$view->env = APPLICATION_ENV;
@@ -39,15 +29,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		
 		return $view;
 	}
-	
-<<<<<<< HEAD
+
 	protected function _initViewHelpers() {
 		Zend_Paginator::setDefaultScrollingStyle('Sliding');
 		Zend_View_Helper_PaginationControl::setDefaultViewPartial('pagination.phtml');
 	}
 }
 
-=======
-}
-
->>>>>>> origin/dev
