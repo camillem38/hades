@@ -3,7 +3,7 @@
 class Frontend_Model_DbTable_Questionnaire extends Zend_Db_Table_Abstract
 {
 
-    protected $_name = 'questionnaire';
+    protected $_name = 'Questionnaire';
     //protected $_rowClass = 'Application_Model_DbRow_Questionnaire';
 
     public function __toString()

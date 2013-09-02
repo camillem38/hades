@@ -3,7 +3,7 @@
 class Admin_Model_DbTable_Questionnaire extends Zend_Db_Table_Abstract
 {
 
-    protected $_name = 'questionnaire';
+    protected $_name = 'Questionnaire';
     
     public function ajouterQuestionnaire($name, $timer, $nbQuestion)
     {
@@ -14,5 +14,12 @@ class Admin_Model_DbTable_Questionnaire extends Zend_Db_Table_Abstract
         );
         $this->insert($data);
     }
+    
+    public function supprimerQuestionnaire($id)
+    {
+        $row = $this->fetchRow('idQuestionnaire = '. $id);
+        $row->delete();
+    }
+    
 }
 

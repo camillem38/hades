@@ -27,9 +27,17 @@ class Admin_IndexController extends Zend_Controller_Action {
                     $db_questionnaires = new Admin_Model_DbTable_Questionnaire();
                     $db_questionnaires->ajouterQuestionnaire($name, $timer, $nbQuestion);
                 }
-                $this->_helper->redirector('index', 'index', 'frontend');
+                $this->_helper->redirector('index', 'index', 'admin');
             }
             
     }
 
+    
+    public function delquestionnaireAction() {
+        $id = $this->_getParam("id");
+        $db_questionnaires = new Admin_Model_DbTable_Questionnaire();
+        $db_questionnaires->supprimerQuestionnaire($id);
+
+        $this->_helper->redirector('index', 'index', 'admin');
+    }
 }
