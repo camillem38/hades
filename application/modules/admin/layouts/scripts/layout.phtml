@@ -1,0 +1,34 @@
+<?php echo $this->doctype()."\r\n" ?>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+ <?php echo $this->headMeta(); ?>
+ <?php echo $this->headTitle(); ?>
+ <?php echo $this->headLink(); ?>
+ <?php echo $this->headScript(); ?>
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+		<p class="chromeframe">
+			Vous utilisez un navigateur <strong>obsolète</strong>.
+			Veuillez <a href="http://browsehappy.com/">le mettre à jour</a>
+			ou <a href="http://www.google.com/chromeframe/?redirect=true">activer Google Chrome Frame</a>
+			pour améliorer votre expérience de navigation.
+		</p>
+    <![endif]-->
+    
+    <?php echo $this->partial('header.phtml'); ?>
+	<div class="container">
+    	<?php echo $this->layout()->content; ?>
+		<?php echo $this->partial('footer.phtml'); ?>
+    </div>
+    
+    <?php echo $this->inlineScript(); ?>
+    
+</body>
+
+</html>
