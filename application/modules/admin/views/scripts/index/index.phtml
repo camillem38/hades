@@ -1,8 +1,13 @@
 <h1>Administration</h1>
 
-<a class="button add" href="<?php echo $this->url(array('controller'=>'index','action'=>'addQuestionnaire','module'=>'admin'));?>">Ajouter un questionnaire</a>
+<a class="button" href="<?php echo $this->url(array('controller'=>'Questionnaire','action'=>'addQuestionnaire','module'=>'admin'));?>">Ajouter un questionnaire</a>
 
 <h3>Liste des questionnaires : </h3>
 <?php foreach($this->questionnaires as $questionnaire): ?>
-<p>Nom : <?= $questionnaire->name ?> -  Durée : <?= $questionnaire->timer ?> - Nombre de question : <?= $questionnaire->nbQuestion ?><a href="<?=  $this->url(array('controller'=>'index','action'=>'delQuestionnaire','module'=>'admin', 'id'=>$questionnaire->idQuestionnaire));?>">Supprimer</a></p>
+<p>Nom : <?= $questionnaire->name ?> -  
+    Durée : <?= $questionnaire->timer ?> - 
+    Nombre de question : <?= $questionnaire->nbQuestion ?>
+    <a href="<?=  $this->url(array('controller'=>'Questionnaire','action'=>'delQuestionnaire','module'=>'admin', 'id'=>$questionnaire->idQuestionnaire));?>">Supprimer</a>
+    <a class="button add" href="<?php echo $this->url(array('controller'=>'Question','action'=>'addQuestion','module'=>'admin'));?>">Ajouter un question</a>
+</p>
 <?php endforeach;  ?>
