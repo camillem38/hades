@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Questionnaire` (
   `idQuestionnaire` INT NOT NULL AUTO_INCREMENT,
   `timer` INT NOT NULL,
   `nbQuestion` INT NOT NULL,
-  'name' VARCHAR(30) NOT NULL,
+  `name` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`idQuestionnaire`))
 ENGINE = InnoDB;
 
