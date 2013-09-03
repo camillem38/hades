@@ -12,8 +12,8 @@ class Frontend_Model_DbTable_Questionnaire extends Zend_Db_Table_Abstract
                     return $this->name;
             if(isset($this->timer))
                     return $this->timer;
-            if(isset($this->nbQuery))
-                    return $this->nbQuery;
+            if(isset($this->nbQuestion))
+                    return $this->nbQuestion;
         return parent::__toString();
     }
     

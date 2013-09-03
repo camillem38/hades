@@ -10,7 +10,7 @@ class Admin_Model_DbTable_Questionnaire extends Zend_Db_Table_Abstract
         $data = array(
             'name' => $name,
             'timer' => $timer,
-            'nbQuery' => $nbQuestion,
+            'nbQuestion' => $nbQuestion,
         );
         $this->insert($data);
     }
