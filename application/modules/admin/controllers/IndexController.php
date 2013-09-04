@@ -15,7 +15,8 @@ class Admin_IndexController extends Zend_Controller_Action {
             
             $this->view->form = $form;
             
-            if ($this->getRequest()->isPost()) {
+            if ($this->getRequest()->isPost()) 
+            {
                 $questionnaireData = $this->getRequest()->getPost();
                 
                 if ($form->isValid($questionnaireData)) {
@@ -33,11 +34,19 @@ class Admin_IndexController extends Zend_Controller_Action {
     }
 
     
-    public function delquestionnaireAction() {
+    public function delquestionnaireAction() 
+    {
         $id = $this->_getParam("id");
         $db_questionnaires = new Admin_Model_DbTable_Questionnaire();
         $db_questionnaires->supprimerQuestionnaire($id);
 
         $this->_helper->redirector('index', 'index', 'admin');
+    }
+    
+    public function addquestionAction()
+    {
+        $form = new Admin_Form_Question();
+
+        $this->view->form = $form;
     }
 }
