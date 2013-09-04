@@ -1,8 +1,96 @@
+/* Typographie ===============================================================*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+
 body
 {
-	padding-top:    5em;
-	padding-bottom: 3em;
+    font-family: 'Josefin Slab', serif;
+    font-size: 12pt;
 }
+
+h1,
+h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+/* Layout ====================================================================*/
+
+html,
+body
+{
+    margin:     0;
+    padding:    0;
+    height:     100%
+}
+
+/* Header --------------------------------------------------------------------*/
+
+#main-container
+{
+    min-height: 100%;
+    position: relative;
+}
+
+header .navbar-inner .container
+{
+    margin-top:     2em;
+    margin-bottom:  0.5em;
+}
+
+.navbar a.brand
+{
+    font-family:    'Roboto', sans-serif;
+    font-size:      3em;
+}
+
+#header-decorator
+{
+    /* gradient genere par http://www.colorzilla.com/gradient-editor/ */
+    background: #24748c; /* Old browsers */
+    background: -moz-linear-gradient(left,  #24748c 0%, #43b0cc 50%, #43b0cc 65%, #24748c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#24748c), color-stop(50%,#43b0cc), color-stop(65%,#43b0cc), color-stop(100%,#24748c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #24748c 0%,#43b0cc 50%,#43b0cc 65%,#24748c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #24748c 0%,#43b0cc 50%,#43b0cc 65%,#24748c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #24748c 0%,#43b0cc 50%,#43b0cc 65%,#24748c 100%); /* IE10+ */
+    background: linear-gradient(to right,  #24748c 0%,#43b0cc 50%,#43b0cc 65%,#24748c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24748c', endColorstr='#24748c',GradientType=1 ); /* IE6-9 */
+
+    height:             0.75em;
+}
+
+/* Contenu -------------------------------------------------------------------*/
+
+#main-section
+{
+    padding-top:    12em;
+    padding-bottom: 20em;
+}
+
+
+/* Footer --------------------------------------------------------------------*/
+
+footer
+{
+    background-color:   #ededee;
+    position:           absolute;
+    bottom:             0px;
+    width:              100%;
+    padding:            1em 0 10em;
+}
+
+footer a
+{
+    color:              #bfbfbf;
+}
+
+
 
 
 

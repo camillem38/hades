@@ -14,22 +14,24 @@
 <body>
 	<!--[if lt IE 7]>
 		<p class="chromeframe">
-			Vous utilisez un navigateur <strong>obsolète</strong>.
-			Veuillez <a href="http://browsehappy.com/">le mettre à jour</a>
+			Vous utilisez un navigateur <strong>obsolï¿½te</strong>.
+			Veuillez <a href="http://browsehappy.com/">le mettre ï¿½ jour</a>
 			ou <a href="http://www.google.com/chromeframe/?redirect=true">activer Google Chrome Frame</a>
-			pour améliorer votre expérience de navigation.
+			pour amï¿½liorer votre expï¿½rience de navigation.
 		</p>
     <![endif]-->
-    
-    <?php echo $this->partial('header.phtml'); ?>
 
-	<div class="container">
-    	<?php echo $this->layout()->content; ?>
-		<?php echo $this->partial('footer.phtml'); ?>
+
+    <div id="main-container">
+      <?php echo $this->partial('header.phtml'); ?>
+
+      <section id="main-section" class="container">
+        <?php echo $this->layout()->content; ?>
+      </section>
+
+      <?php echo $this->partial('footer.phtml'); ?>
+      <?php echo $this->inlineScript(); ?>
     </div>
-    
-    <?php echo $this->inlineScript(); ?>
-    
 </body>
 
 </html>

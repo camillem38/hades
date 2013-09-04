@@ -1,9 +1,50 @@
-<div id="footer">
-	<div class="pagination">
-		<?php
-                    if ($this->liste) {
-                        echo $this->paginationControl($this->liste);
-                    }
-                ?>
-	</div>
+<div class="container">
+  <div class="pagination">
+    <?php
+                      if ($this->liste) {
+    echo $this->paginationControl($this->liste);
+    }
+    ?>
+  </div>
 </div>
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="span4">
+        <ul class="nav nav-list">
+          <li class="nav-header">&copy; HADES 2013</li>
+          <li>
+            <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index', 'module' => 'frontend')); ?>">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index', 'module' => 'admin')); ?>">
+              Administration
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="span4">
+        <ul class="nav nav-list">
+          <li class="nav-header"></li>
+          <li>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="span4">
+        <ul class="nav nav-list">
+          <li class="nav-header"></li>
+          <li>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
